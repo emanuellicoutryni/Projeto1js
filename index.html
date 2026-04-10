@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Filme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    
+        body {
+            background-color: #000000; 
+            color: #ffffff;
+            
+            font-family: 'Montserrat', sans-serif; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+    
+        .caixa-principal {
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+        
+            border-left: 4px solid #800020; 
+            border-right: 4px solid #800020;
+            background-color: #0a0a0a; 
+            text-align: center;
+            border-radius: 10px; 
+            
+        
+            box-shadow: 0 10px 30px rgba(128, 0, 32, 0.5); 
+        }
+
+        h2, h3 { 
+            color: #C71585; 
+            font-weight: 700; 
+            margin-bottom: 20px;
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+
+        h3 {
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        input {
+            background-color: #1a1a1a;
+            border: 1px solid #800020; 
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            width: 100%; 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 0.9em;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #C71585; 
+        }
+
+        button {
+            background-color: #800020; 
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #C71585; 
+            transform: translateY(-2px); 
+        }
+
+
+        .divisor {
+            border-top: 2px solid #800020;
+            margin: 30px 0;
+            opacity: 0.5;
+        }
+
+        #listarFilmes {
+            text-align: left;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 5px;
+            margin-top: 20px;
+            color: #ffb6c1; 
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="caixa-principal">
+        <h2>Cadastro de Filmes</h2>
+        <input type="text" id="titulo" placeholder="Digite um titulo">
+        <input type="number" id="ano" placeholder="Digite o ano">
+        <input type="text" id="classificacao" placeholder="Classificacao">
+        <button id="btnCadastrar">cadastrar</button>
+
+        <div class="divisor"></div>
+
+        <h3>Filtrar por Classificacao</h3>
+        <input type="text" id="filtroClassificacao" placeholder="Classificacao">
+        <button id="btnFiltrarClassificacao">Filtrar</button>
+
+        <h3>Filtrar por Ano</h3>
+        <input type="number" id="filtroAno" placeholder="Digite o ano">
+        <button id="btnFiltrarAno">Filtrar</button>
+
+        <div class="divisor"></div>
+
+        <h3>Lista de Filmes</h3>
+        <p id="listarFilmes">A lista aparecerá aqui...</p>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
